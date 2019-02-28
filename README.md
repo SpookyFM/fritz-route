@@ -15,7 +15,7 @@ This tool will create or update a static IPv4 route on your Fritz!Box. You will 
 * `url` The URL of your Fritz!Box. For example `https://fritz.box`
 * `network` The network for which you want to setup the route. E.g. `192.168.178.2`
 * `subnet` The subnet mask of the network for which you are setting up the route. E.g. `255.255.255.255`
-* `gateway` The gateway for your route
+* `gateway` The gateway for your route, e.g. `192.168.0.1`
 * `active` Whether the route will be active (`true`) or inactive (`false`) after running the tool
     
 You may also provide these arguments to the script in the form of a JSON file, in this case, only provide the following argument to the script:
