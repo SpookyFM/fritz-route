@@ -1,11 +1,11 @@
-# fritz_route
+# fritz-route
 This command-line tool allows manipulation of static routes on a Fritz!Box via the command line.
 
 ## Installation
 In order to install (as a command-line tool), use the following command
 
 ```shell
-npm install fritz_route --global
+npm install fritz-route --global
 ```
 
 ## Usage

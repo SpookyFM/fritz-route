@@ -1,5 +1,5 @@
 {
-  "name": "fritz_route",
+  "name": "fritz-route",
   "version": "1.0.0",
   "description": "Tool for setting static routes on Fritz!Box",
   "main": "cli.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SpookyFM/fritz_route.git"
+    "url": "git+https://github.com/SpookyFM/fritz-route.git"
   },
   "keywords": [
     "Fritz!Box",
@@ -19,9 +19,9 @@
   "author": "Florian Mehm <florian@mehm.net> (https://www.mehm.net)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SpookyFM/fritz_route/issues"
+    "url": "https://github.com/SpookyFM/fritz-route/issues"
   },
-  "homepage": "https://github.com/SpookyFM/fritz_route#readme",
+  "homepage": "https://github.com/SpookyFM/fritz-route#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "cheerio": "^1.0.0-rc.2",
