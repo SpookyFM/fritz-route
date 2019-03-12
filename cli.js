@@ -178,14 +178,33 @@ async function QueryRoutes()
 	var tr = table.find('tr:not(".thead")');
 	
 	var parsedRoutes = [];
+	var rows = [];
+	var isEmpty = false;
+	
 	tr.map((rowIndex, currentTR) => {
-		var isActive = $(currentTR).children().eq(0).children().first().prop('checked');
-		var network = $(currentTR).children().eq(1).text();
-		var subnetMask = $(currentTR).children().eq(2).text();
-		var gateway = $(currentTR).children().eq(3).text();
-		var currentRoute = new Route(rowIndex, network, subnetMask, gateway, isActive);
-		parsedRoutes.push(currentRoute);
+		rows.push(currentTR);
 	});
+
+	if (rows.length == 1)
+	{
+		// Check if this indicates that there are none
+		isEmpty = $(rows[0]).children().eq(0).hasClass('txt_center');
+	}
+
+	if (!isEmpty)
+	{
+		for (var rowIndex = 0; rowIndex < rows.length; rowIndex++)
+		{
+			var currentTR = rows[rowIndex];
+			var isActive = $(currentTR).children().eq(0).children().first().prop('checked');
+			var network = $(currentTR).children().eq(1).text();
+			var subnetMask = $(currentTR).children().eq(2).text();
+			var gateway = $(currentTR).children().eq(3).text();
+			var currentRoute = new Route(rowIndex, network, subnetMask, gateway, isActive);
+			parsedRoutes.push(currentRoute);
+		}
+	}
+	
 	return parsedRoutes;
 }
 
