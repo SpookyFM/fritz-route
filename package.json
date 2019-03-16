@@ -1,6 +1,6 @@
 {
   "name": "fritz-route",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tool for setting static routes on Fritz!Box",
   "main": "cli.js",
   "bin": {
