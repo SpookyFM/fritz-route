@@ -267,7 +267,7 @@ async function main()
 		newActive = !route._isActive;
 	}
 
-	await SetRouteActive(route, config.active);
+	await SetRouteActive(route, newActive);
 }
 
 main();
