@@ -104,7 +104,7 @@ async function ReadArgumentsAndConfig(configFile)
 		}
 		config = data;
 		// Set the default value for the active flag in case it is not specified
-		if (config.active === undefined)
+		if (config.active === undefined && config.toggle === undefined)
 		{
 			config.active = true;
 		}
@@ -259,6 +259,12 @@ async function main()
 	if (route === undefined)
 	{
 		route = new Route(existingRoutes.length, config.network, config.subnet, config.gateway, config.active);
+	}
+	
+	var newActive = config.active;
+	if (config.toggle)
+	{
+		newActive = !route._isActive;
 	}
 
 	await SetRouteActive(route, config.active);
